@@ -1,0 +1,35 @@
+Name = "Base infinity layer";
+Layout = "Standard";
+Version = "0.2";
+Author = "Matt Ventura";
+KLL = "0.3";
+Date = "2014-09-14";
+Generator = "KIICONF 0.1";
+
+# The idea behind this layout is to put as much stuff in the
+# "normal" (as in PC104) layout as possible, with the exception of 
+# the bottom left modifiers and caps/esc.  
+# Most of it is done in the scan map, so this file doesn't
+# have to do much. 
+# Bottom left is Ctrl, Fn1, Alt. 
+# Right modifiers are normal (AltGr, RGui, Menu, RCtrl).  
+# Caps lock is esc. 
+# Top right is backspace on the left, delete on the right. 
+# Fn1 is a bash-like mode with some other stuff thrown in, 
+# e.g. Fn1-A is home, Fn1-W deletes a word, Fn1-D is PgDn. 
+# Also puts F1-F14 on the top row, and a few other keys. 
+# Fn2 is the key right of Right Shift and emulates a few 
+# vim commands plus insert mode. 
+
+
+# Key between LShift and Tab
+U"CAPSLOCK" : U"ESCAPE";
+
+# Key right of rshift
+# Enter vim mode. 
+U"FUNCTION1" : layerLock( 2 );
+
+# Key between LCtrl and LAlt
+# Enable bash-like commands
+U"LGui" : layerShift( 1 );
+

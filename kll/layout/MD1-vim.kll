@@ -1,0 +1,81 @@
+Name = "Vim normal mode";
+Layout = "Standard";
+Version = "0.2";
+Author = "Matt Ventura";
+KLL = "0.3";
+
+# Vim normal mode
+
+# Things we can do:
+# * i/a/s/o/I/A/S/O (various ways of entering insert mode)
+# * hjkl
+# * w/b
+# * ^/$
+# * p/P
+# * x/X
+# * J
+# * d(d/w/b/^/$)
+# * D
+# * c(c/w/b/^/$)
+# * C
+# * y(y/w/b/^/$)
+# * u
+
+# Things we can't really do in KLL and why:
+# * Visual mode/visual line mode. No way to tell the keyboard to hold shift. 
+# * Count prefixes for commands. Way beyond KLL. 
+# * Having multiple paste buffers. We can only interact with 
+#      the system clipboard. 
+# * Macro recording. No support for on-the-fly recording in KLL (yet). 
+# * f/F/t/T. Can't read from the text. 
+# * W/B, same. 
+
+# Things we might do later:
+# * gg/G (Ctrl-Home/End)
+# * Y
+# * /
+
+# Because it's not possible to say "only do this if
+# shift is *not* pressed", we have to use a layer for shift
+# and turn off the current layer to prevent it from interfering. 
+U"SHIFT" : layerShift(2), layerShift(3);
+
+
+# Various ways of entering insert mode
+# Plain old insert
+U"I" : layerLock(2), layerLock(7);
+# Append (move right first)
+U"A" : U"RIGHT", layerLock(2), layerLock (7);
+# Substitute 1 character
+U"S" : U"DELETE", layerLock(2), layerLock(7);
+# Go to EOL, make a new line, and insert
+U"O" : U"END", U"ENTER", layerLock(2), layerLock(7);
+
+# Navigation by word
+U"W" : U"CTRL" + U"RIGHT";
+U"B" : U"CTRL" + U"LEFT";
+
+#U"SHIFT" + U"6" : U"HOME";
+#U"SHIFT" + U"4" : U"END";
+
+# Delete
+U"X" : U"DELETE";
+
+# navigation by 1 character
+U"H" : U"LEFT"; 
+U"J" : U"DOWN"; 
+U"K" : U"UP"; 
+U"L" : U"RIGHT"; 
+
+# Delete/cut, yank/copy, and change.  
+U"D" : layerLock(2), layerLock( 4 );
+U"Y" : layerLock(2), layerLock( 5 );
+U"C" : layerLock(2), layerLock( 6 );
+# Move right and paste
+U"P" : U"RIGHT", U"CTRL" + U"V";
+
+# Undo
+U"U" : U"CTRL" + U"Z";
+# Not sure what to map redo to. Different programs use different 
+# hotkeys for redo. 
+#U"CTRL" + U"R" : 

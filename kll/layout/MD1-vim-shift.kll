@@ -1,0 +1,42 @@
+Name = "Vim normal mode shift";
+Layout = "Standard";
+Version = "0.2";
+Author = "Matt Ventura";
+KLL = "0.3";
+Date = "2014-09-14";
+Generator = "KIICONF 0.1";
+
+# Vim normal mode with shift key held
+
+
+# Various ways of entering insert mode
+# Go to beginning of line and insert
+U"I" : U"HOME", layerLock( 2 ), layerLock (7);
+# Go to EOL and insert
+U"A" : U"END", layerLock( 2 ), layerLock (7);
+# Substitute entire current line
+U"S" : U"HOME", U"SHIFT" + U"END", U"DELETE", layerLock( 2 ), layerLock(7);
+# To to beginning of line, press enter, go up to now-blank line. 
+U"O" : U"HOME", U"ENTER", U"UP", layerLock(2), layerLock(7);
+
+# Can't really differentiate between
+# words and Words for keyboard purposes
+#U"W" : U"CTRL" + U"RIGHT";
+#U"B" : U"CTRL" + U"LEFT";
+
+# Home/end
+U"6" : U"HOME";
+U"4" : U"END";
+
+U"X" : U"BACKSPACE";
+
+# Join lines
+U"J" : U"END", U"DELETE"; 
+
+# Paste without moving right first
+U"P" : U"CTRL" + U"V";
+
+# Delete to EOL
+U"D" : U"SHIFT" + U"END", U"CTRL" + U"X";
+# Change to EOL
+U"C" : U"SHIFT" + U"END", U"CTRL" + U"X", layerLock(2), layerLock(7);

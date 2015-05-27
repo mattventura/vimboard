@@ -1,0 +1,21 @@
+Name = "Vim-like change";
+Layout = "Standard";
+Version = "0.2";
+Author = "Matt Ventura";
+KLL = "0.3";
+
+# Vim delete/cut layer. 
+
+# Supposed to be as close to any key as possible
+U["A" - "EXSEL"] : None;
+
+U"W" : U"SHIFT" + U"LCTRL" + U"RIGHT", U"LCTRL" + U"X";
+U"B" : U"SHIFT" + U"LCTRL" + U"LEFT", U"LCTRL" + U"X";
+'$' : U"SHIFT" + U"END" , U"LCTRL" + U"X";
+U"4" : U"SHIFT" + U"END" , U"LCTRL" + U"X";
+'^' : U"SHIFT" + U"HOME" , U"LCTRL" + U"X";
+U"6" : U"SHIFT" + U"HOME" , U"LCTRL" + U"X";
+U"C" : U"HOME", U"SHIFT" + U"END", U"LCTRL" + U"X";
+
+U"ESCAPE" : None;
+U["W", "B", "4", "6", "C", "ESCAPE"] :+ layerLock(7), layerLock(6);

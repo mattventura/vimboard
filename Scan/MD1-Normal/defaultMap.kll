@@ -1,0 +1,80 @@
+Name = "MD1-Normal";
+Version = 0.2;
+Author = "Matt Ventura";
+KLL = 0.3;
+Date = 2014-09-14;
+
+# Top row
+S0x00 : U"Backtick";
+S0x01 : U"1";
+S0x02 : U"2";
+S0x03 : U"3";
+S0x04 : U"4";
+S0x05 : U"5";
+S0x06 : U"6";
+S0x07 : U"7";
+S0x08 : U"8";
+S0x09 : U"9";
+S0x0A : U"0";
+S0x0B : U"Minus";
+S0x0C : U"Equal";
+# Two 1u keys where backspace would normally be
+S0x0D : U"Backspace";
+S0x0E : U"Delete";
+
+# 2nd row
+S0x0F : U"Tab";
+S0x10 : U"Q";
+S0x11 : U"W";
+S0x12 : U"E";
+S0x13 : U"R";
+S0x14 : U"T";
+S0x15 : U"Y";
+S0x16 : U"U";
+S0x17 : U"I";
+S0x18 : U"O";
+S0x19 : U"P";
+S0x1A : U"LBrace";
+S0x1B : U"RBrace";
+S0x1C : U"Backslash";
+
+# 3rd row
+S0x1D : U"Capslock";
+S0x1E : U"A";
+S0x1F : U"S";
+S0x20 : U"D";
+S0x21 : U"F";
+S0x22 : U"G";
+S0x23 : U"H";
+S0x24 : U"J";
+S0x25 : U"K";
+S0x26 : U"L";
+S0x27 : U"Semicolon";
+S0x28 : U"Quote";
+S0x29 : U"Enter";
+
+# 4th row
+S0x2A : U"LShift";
+S0x2B : U"Z";
+S0x2C : U"X";
+S0x2D : U"C";
+S0x2E : U"V";
+S0x2F : U"B";
+S0x30 : U"N";
+S0x31 : U"M";
+S0x32 : U"Comma";
+S0x33 : U"Period";
+S0x34 : U"Slash";
+S0x35 : U"RShift";
+S0x36 : U"Function1"; # 1u key right of RShift
+
+# Bottom row
+S0x37 : U"LCtrl"; 
+S0x38 : U"LGui";
+S0x39 : U"LAlt";
+S0x3A : U"Space";
+S0x3B : U"RAlt";
+S0x3C : U"RGui";
+S0x3D : U"App"; 
+S0x3E : U"RCtrl";
+

@@ -1,0 +1,9 @@
+Name = "Vim insert layer";
+Layout = "Standard";
+Author = "Matt Ventura";
+KLL = "0.3";
+
+
+# Exit insert mode instead of sending escape
+U"CAPSLOCK" : layerLock( 2 ), layerLock ( 7 );
+
