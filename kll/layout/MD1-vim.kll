@@ -21,8 +21,10 @@ KLL = "0.3";
 # * y(y/w/b/^/$)
 # * u
 
+# Things we can do in future version of KLL
+# * v/V
+
 # Things we can't really do in KLL and why:
-# * Visual mode/visual line mode. No way to tell the keyboard to hold shift. 
 # * Count prefixes for commands. Way beyond KLL. 
 # * Having multiple paste buffers. We can only interact with 
 #      the system clipboard. 
@@ -38,6 +40,7 @@ KLL = "0.3";
 # Because it's not possible to say "only do this if
 # shift is *not* pressed", we have to use a layer for shift
 # and turn off the current layer to prevent it from interfering. 
+# This will be improved in a future version of KLL. 
 U"SHIFT" : layerShift(2), layerShift(3);
 
 
