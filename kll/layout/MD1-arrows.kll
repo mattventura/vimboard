@@ -1,0 +1,12 @@
+Name = "Arrow keys";
+Layout = "Standard";
+Version = "0.2";
+Authoer = "Matt Ventura";
+KLL = "0.3";
+
+# Use right modifiers and shift as arrow keys
+
+U"RShift" : U"Up";
+U"RGui" : U"Left";
+U"App" : U"Down";
+U"RCtrl" : U"Right";

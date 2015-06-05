@@ -37,6 +37,9 @@ KLL = "0.3";
 # * Y
 # * /
 
+# Also TODO:
+# Block fallback to base layer for keys not defined here
+
 # Because it's not possible to say "only do this if
 # shift is *not* pressed", we have to use a layer for shift
 # and turn off the current layer to prevent it from interfering. 
@@ -81,4 +84,5 @@ U"P" : U"RIGHT", U"CTRL" + U"V";
 U"U" : U"CTRL" + U"Z";
 # Not sure what to map redo to. Different programs use different 
 # hotkeys for redo. 
+# It can be Ctrl-Y, Ctrl-Shift-Z, or something else entirely. 
 #U"CTRL" + U"R" : 

@@ -119,7 +119,7 @@ set(  DefaultMap "MD1-Base"
 
 ##| ParitalMaps available on top of the BaseMap. See above for syntax on specifying multiple layers vs. layering
 ##| Can be set to ""
-set( PartialMaps MD1-Fn MD1-vim MD1-vim-shift MD1-vim-cut MD1-vim-copy MD1-vim-change MD1-insert
+set( PartialMaps MD1-Fn MD1-vim MD1-vim-shift MD1-vim-cut MD1-vim-copy MD1-vim-change MD1-insert MD1-arrows
 	CACHE STRING "KLL PartialMaps/Layer Definitions" )
 
 

@@ -16,7 +16,7 @@ U"I" : U"HOME", layerLock( 2 ), layerLock (7);
 U"A" : U"END", layerLock( 2 ), layerLock (7);
 # Substitute entire current line
 U"S" : U"HOME", U"SHIFT" + U"END", U"DELETE", layerLock( 2 ), layerLock(7);
-# To to beginning of line, press enter, go up to now-blank line. 
+# Go to beginning of line, press enter, go up to now-blank line. 
 U"O" : U"HOME", U"ENTER", U"UP", layerLock(2), layerLock(7);
 
 # Can't really differentiate between

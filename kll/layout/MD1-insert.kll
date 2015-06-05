@@ -5,5 +5,12 @@ KLL = "0.3";
 
 
 # Exit insert mode instead of sending escape
+# I know I should technically be moving left
+# 1 character when exiting insert mode, but
+# since I can't detect if the cursor is at
+# the front of the line, I can't block it from
+# going to the previous line like in vim. 
+# So for now it won't move back one position when
+# you exit insert mode. 
 U"CAPSLOCK" : layerLock( 2 ), layerLock ( 7 );
 

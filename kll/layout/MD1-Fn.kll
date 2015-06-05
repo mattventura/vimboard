@@ -22,7 +22,9 @@ U"DELETE" : U"F14";
 
 # Useful for launching stuff (top-left key). 
 # TODO: Figure out what USB code gets translated to
-# XF86Launch1
+# XF86Launch1. 
+# Setting it to MediaWWW (translated to XF86WWW) for now, since it
+# can just be configured in software. 
 U"BACKTICK" : CONS"MediaWWW";
 
 # Bash/emacs like bindings with
@@ -41,8 +43,10 @@ U"N" : U"DOWN";
 U"B" : U"LEFT";
 U"F" : U"RIGHT";
 
-U"H" : U"BACKSPACE";
 U"J" : U"ENTER";
+
+# Deletions
+U"H" : U"BACKSPACE";
 U"W" : U"LCTRL" + U"BACKSPACE";
 
 U"S" : U"PAUSE";
@@ -53,8 +57,12 @@ U"I" : U"INSERT";
 U"BACKSLASH" : U"PRINTSCREEN";
 # Give access to caps lock
 U"CAPSLOCK" : U"CAPSLOCK";
+
+# Volume keys
 U"COMMA" : U"VOLUMEDOWN";
 U"PERIOD" : U"VOLUMEUP";
 U"SLASH" : U"MUTE";
 
+# Press both Fn keys together to lock arrows
+U"Function1" : layerLock(8);
 
